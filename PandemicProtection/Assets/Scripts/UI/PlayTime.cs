@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayTime : MonoBehaviour
 {
     public static float time;
     
-    public Text Timer;
+    public TextMeshProUGUI Timer;
     // Start is called before the first frame update
     void Start()
     {
-        Timer = GetComponent<Text>();
+        Timer = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
