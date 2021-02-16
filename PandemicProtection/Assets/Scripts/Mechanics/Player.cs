@@ -44,11 +44,16 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("collision");
-        if (other.gameObject.CompareTag("Points"))
+        //Debug.Log("collision");
+        if (other.gameObject.CompareTag("Points")) // protection points
         {
             PointManager.instance.UpdatePoints(1);
             Destroy(other.gameObject);
+        }
+        else if(other.gameObject.CompareTag("DeathZone")) // player falls into death zones
+        {
+            Debug.Log("Death");
+            // go home
         }
     }
 }
