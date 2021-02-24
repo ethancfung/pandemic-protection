@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Points
   - DeathZone
+  - NPC
   layers:
   - Default
   - TransparentFX
