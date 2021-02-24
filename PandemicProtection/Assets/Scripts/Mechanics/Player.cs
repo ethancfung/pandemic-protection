@@ -68,5 +68,9 @@ public class Player : MonoBehaviour
         {
             Debug.Log("NPC");
         }
+        else if (other.gameObject.CompareTag("VictoryZone"))
+        {
+            Debug.Log("Victory");
+        }
     }
 }
