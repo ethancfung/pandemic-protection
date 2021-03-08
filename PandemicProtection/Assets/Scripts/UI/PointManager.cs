@@ -22,7 +22,7 @@ public class PointManager : MonoBehaviour
     public void UpdatePoints(int value)
     {
         score += value;
-        text.text = "Points: " + score.ToString();
+        text.text = "x " + score.ToString();
     }
 
 }
