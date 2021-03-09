@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
     //NPC Global variables
     public Vector3 NPCPos;
     private float range = 4;
-    public static bool withinRange = false;
 
     void Start()
     {
@@ -22,7 +21,7 @@ public class Player : MonoBehaviour
     
     void Update()
     {
-        NPCPos = GameObject.FindGameObjectWithTag("NPC").transform.position;
+        //NPCPos = GameObject.FindGameObjectWithTag("NPC").transform.position;
         var movement = Input.GetAxis("Horizontal");
         if(movement > 0.0f)
         {
@@ -38,8 +37,9 @@ public class Player : MonoBehaviour
             _rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
         }
 
-        float npcDistance = NPCPos.x - transform.position.x;
+        //float npcDistance = NPCPos.x - transform.position.x;
 
+        /*
         if(npcDistance > -range && npcDistance < range )
         {
              withinRange = true;
@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
         {
             withinRange = false;
         }
+        */
 
     }
 
