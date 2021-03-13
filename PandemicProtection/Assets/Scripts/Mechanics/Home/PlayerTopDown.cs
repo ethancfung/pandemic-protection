@@ -33,6 +33,10 @@ public class PlayerTopDown : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-       Debug.Log("Collider");
+       
+        if (other.gameObject.CompareTag("HomeDoor"))
+        {
+            LevelLoader.instance.LoadNextLevel(-1);
+        }
     }
 }

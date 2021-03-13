@@ -6,9 +6,19 @@ using UnityEngine.UI;
 
 public class LevelLoader : MonoBehaviour
 {
+    public static LevelLoader instance;
     public Animator transition;
     public float transitionTime = 1f;
-    public Button transitionBtn;
+    //public Button transitionBtn;
+    //public int nextScreen = -1;
+
+    void Start()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,13 +27,20 @@ public class LevelLoader : MonoBehaviour
         {
             LoadNextLevel();
         }*/
-        Button btn = transitionBtn.GetComponent<Button>();
-        btn.onClick.AddListener(LoadNextLevel);
+        //Button btn = transitionBtn.GetComponent<Button>();
+        //btn.onClick.AddListener(LoadNextLevel);
     }
 
-    public void LoadNextLevel()
+    public void LoadNextLevel(int nextScreen)
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        if (nextScreen == -1) // load next level in sequence
+        {
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        }
+        else // load specified build index
+        {
+            StartCoroutine(LoadLevel(nextScreen));
+        }
     }
 
     IEnumerator LoadLevel(int levelIndex)

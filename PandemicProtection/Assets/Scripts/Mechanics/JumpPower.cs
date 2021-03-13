@@ -18,7 +18,7 @@ public class JumpPower : MonoBehaviour
                 Destroy(gameObject);
 
             }
-            Debug.Log(playerScript.JumpForce);
+            //Debug.Log(playerScript.JumpForce);
         }
     }
 }

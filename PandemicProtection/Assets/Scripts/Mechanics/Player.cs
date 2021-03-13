@@ -21,8 +21,8 @@ public class Player : MonoBehaviour
     
     void Update()
     {
-        Debug.Log(MovementSpeed);
-        Debug.Log(JumpForce);
+        //Debug.Log(MovementSpeed);
+        //Debug.Log(JumpForce);
         //NPCPos = GameObject.FindGameObjectWithTag("NPC").transform.position;
         var movement = Input.GetAxis("Horizontal");
         if(movement > 0.0f)
@@ -49,12 +49,12 @@ public class Player : MonoBehaviour
             PointManager.instance.UpdatePoints(1);
             Destroy(other.gameObject);
         }
-        else if(other.gameObject.CompareTag("DeathZone")) // player falls into death zones
+        else if (other.gameObject.CompareTag("DeathZone")) // player falls into death zones
         {
-            Debug.Log("Death");
-            // go home
+            //Debug.Log("Death");
+            LevelLoader.instance.LoadNextLevel(3);
         }
-        else if(other.gameObject.CompareTag("NPC")) 
+        else if (other.gameObject.CompareTag("NPC")) 
         {
             Debug.Log("NPC");
         }

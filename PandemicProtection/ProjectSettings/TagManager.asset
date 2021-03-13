@@ -8,6 +8,7 @@ TagManager:
   - DeathZone
   - NPC
   - VictoryZone
+  - HomeDoor
   layers:
   - Default
   - TransparentFX

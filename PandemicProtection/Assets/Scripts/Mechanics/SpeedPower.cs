@@ -16,7 +16,7 @@ public class SpeedPower : MonoBehaviour {
                 Destroy(gameObject);
 
             }
-            Debug.Log(playerScript.MovementSpeed);
+            //Debug.Log(playerScript.MovementSpeed);
         }
     }
 
