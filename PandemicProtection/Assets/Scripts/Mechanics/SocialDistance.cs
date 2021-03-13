@@ -14,7 +14,6 @@ public class SocialDistance: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -23,8 +22,10 @@ public class SocialDistance: MonoBehaviour
         {
             withinRange = true;
         }
-        else {
-            withinRange = false;
-        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other ) 
+    {
+        withinRange = false;
     }
 }

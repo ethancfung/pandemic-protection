@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class SpeedPower : MonoBehaviour {
-    public float increase = 5;
+    public float increase = 4f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,10 +12,11 @@ public class SpeedPower : MonoBehaviour {
 
             if (playerScript)
             {
-                playerScript.MovementSpeed += increase;
+                playerScript.MovementSpeed = increase;
                 Destroy(gameObject);
 
             }
+            Debug.Log(playerScript.MovementSpeed);
         }
     }
 

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class NPCAction : MonoBehaviour
 {
-    float movespeed = 5.0f;
     public float min = 2f;
     public float max = 3f;
     public SpriteRenderer sprite; 

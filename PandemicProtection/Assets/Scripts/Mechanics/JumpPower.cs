@@ -2,7 +2,7 @@
 
 public class JumpPower : MonoBehaviour
 {
-    public float increase = 5;
+    public float increase = 7f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,10 +14,11 @@ public class JumpPower : MonoBehaviour
 
             if (playerScript)
             {
-                playerScript.JumpForce += increase;
+                playerScript.JumpForce = increase;
                 Destroy(gameObject);
 
             }
+            Debug.Log(playerScript.JumpForce);
         }
     }
 }

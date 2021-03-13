@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     
     void Update()
     {
+        Debug.Log(MovementSpeed);
+        Debug.Log(JumpForce);
         //NPCPos = GameObject.FindGameObjectWithTag("NPC").transform.position;
         var movement = Input.GetAxis("Horizontal");
         if(movement > 0.0f)
@@ -36,19 +38,6 @@ public class Player : MonoBehaviour
         {
             _rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
         }
-
-        //float npcDistance = NPCPos.x - transform.position.x;
-
-        /*
-        if(npcDistance > -range && npcDistance < range )
-        {
-             withinRange = true;
-        }
-        else
-        {
-            withinRange = false;
-        }
-        */
 
     }
 
