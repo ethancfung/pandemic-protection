@@ -25,6 +25,15 @@ public class Health : MonoBehaviour
 
         healthBar.SetHealth(curHealth);
     }
+   
+    public void HealPlayer(int health)
+    {
+        curHealth += health;
+        healthBar.SetHealth(curHealth);
+        //maxHealth += health;
+        //curHealth = maxHealth;
+        //healthBar.SetMaxHealth(maxHealth);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
