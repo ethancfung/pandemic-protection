@@ -3,13 +3,14 @@
 public class JumpPower : MonoBehaviour
 {
     public float increase = 7f;
+    public Player playerScript;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
             GameObject player = collision.gameObject;
-            Player playerScript = player.GetComponent<Player>();
+            playerScript = player.GetComponent<Player>();
             Debug.Log("HIT!");
 
             if (playerScript)
@@ -20,5 +21,11 @@ public class JumpPower : MonoBehaviour
             }
             //Debug.Log(playerScript.MovementSpeed);
         }
+    }
+
+    public void getJumpPower()
+    {
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        playerScript.JumpForce = increase;
     }
 }

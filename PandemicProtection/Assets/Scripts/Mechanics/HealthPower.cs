@@ -31,4 +31,11 @@ public class HealthPower : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void getHealthPower()
+    {
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+        playerHealth.HealPlayer(increase);
+        rend = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>();
+        rend.sprite = maskSprite;
+    }
 }

@@ -12,11 +12,17 @@ public class Player : MonoBehaviour
     //NPC Global variables
     public Vector3 NPCPos;
     private float range = 4;
+    //public SpeedPower speedPower; NULL REFERENCES
+    //public JumpPower jumpPower;
+    //public HealthPower healthPower;
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
+        //speedPower.getSpeedPower();
+        //jumpPower.getJumpPower();
+        //healthPower.getHealthPower();
     }
     
     void Update()
