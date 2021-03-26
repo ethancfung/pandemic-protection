@@ -7,26 +7,37 @@ public class InventoryScript : ScriptableObject
 {
     public List<Item> Inventory = new List<Item>();
     
-    public bool AddItem(Item item) 
+    public void AddItem(Item item) 
+    {
+        Debug.Log(item.purchased);
+        if(item.purchased)
+        {
+            Inventory.Add(item);
+        }
+    }
+
+    public bool chkItem(Item item) 
     {
         int i = 0;
         bool duplicate = false;
 
-        
         while(i < Inventory.Count)
         {
             if(Inventory[i] == item)
             {
+                Debug.Log("help");
                 duplicate = true;
             }
             i++;
         }
-        Debug.Log(item.purchased);
-        if(item.purchased && !duplicate)
+
+        if(!duplicate)
         {
-            Inventory.Add(item);
             return true;
         }
-        return false;
+        else
+        {
+            return false;
+        }
     }
 }

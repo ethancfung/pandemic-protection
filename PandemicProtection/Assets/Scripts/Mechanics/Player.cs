@@ -12,18 +12,16 @@ public class Player : MonoBehaviour
     //NPC Global variables
     public Vector3 NPCPos;
     private float range = 4;
-    //public SpeedPower speedPower; NULL REFERENCES
-    //public JumpPower jumpPower;
-    //public HealthPower healthPower;
+    public SpeedPower speedPower; //NULL REFERENCES
+    public JumpPower jumpPower;
+    public HealthPower healthPower;
     public InventoryScript inventory;
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
-        //speedPower.getSpeedPower();
-        //jumpPower.getJumpPower();
-        //healthPower.getHealthPower();
+
         if(inventory.Inventory.Count != 0)
         {
             for(int i = 0; i < inventory.Inventory.Count; i++)
@@ -31,14 +29,17 @@ public class Player : MonoBehaviour
                 if(inventory.Inventory[i].itemName == "Coffee")
                 {
                     //speed up power up applied
+                    speedPower.getSpeedPower();
                 }   
                 if(inventory.Inventory[i].itemName == "Mask")
                 {
                     //mask power up applied
+                    healthPower.getHealthPower();
                 }
                 if(inventory.Inventory[i].itemName == "Sneakers")
                 {
                     //jump power up applied
+                    jumpPower.getJumpPower();
                 }
             }
         }

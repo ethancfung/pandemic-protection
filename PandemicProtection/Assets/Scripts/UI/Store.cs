@@ -31,11 +31,15 @@ public class Store : MonoBehaviour
 
         if((playerPoints - item.powerup.price) >= 0)
         {
-            if(inventory.AddItem(item.powerup))
+            if(inventory.chkItem(item.powerup))
             {
+                Debug.Log("yes, hello");
                 inventory.AddItem(item.powerup);
                 playerPoints = playerPoints - item.powerup.price;
                 item.powerup.purchased = true;
+            }
+            else {
+                Debug.Log("Power up purchased");
             }
         }
         else 

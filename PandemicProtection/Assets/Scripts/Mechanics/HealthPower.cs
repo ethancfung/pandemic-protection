@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthPower : MonoBehaviour
 {
-    public int increase = 20;
+    public int increase = 10;
     public Health playerHealth;
     private SpriteRenderer rend;
     private Sprite regSprite, maskSprite;

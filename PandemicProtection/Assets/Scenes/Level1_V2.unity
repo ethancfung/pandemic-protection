@@ -14473,6 +14473,9 @@ MonoBehaviour:
   JumpForce: 6.5
   sprite: {fileID: 0}
   NPCPos: {x: 0, y: 0, z: 0}
+  speedPower: {fileID: 1970156862}
+  jumpPower: {fileID: 1950727959}
+  healthPower: {fileID: 684698522}
   inventory: {fileID: 11400000, guid: f75c8c926fc0841aca29d83fdb08e5fe, type: 2}
 --- !u!50 &838423053
 Rigidbody2D:
