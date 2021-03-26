@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthPower : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class HealthPower : MonoBehaviour
 
     private void Start()
     {
-        maskSprite = Resources.Load<Sprite>("Clothes/Hexagon"); // TODO change hexagon to mask sprite
+        maskSprite = Resources.Load<Sprite>("Clothes/Sprite Power Ups"); 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

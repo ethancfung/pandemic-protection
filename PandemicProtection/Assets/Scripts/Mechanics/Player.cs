@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     //public SpeedPower speedPower; NULL REFERENCES
     //public JumpPower jumpPower;
     //public HealthPower healthPower;
+    public InventoryScript inventory;
 
     void Start()
     {
@@ -23,6 +24,24 @@ public class Player : MonoBehaviour
         //speedPower.getSpeedPower();
         //jumpPower.getJumpPower();
         //healthPower.getHealthPower();
+        if(inventory.Inventory.Count != 0)
+        {
+            for(int i = 0; i < inventory.Inventory.Count; i++)
+            {
+                if(inventory.Inventory[i].itemName == "Coffee")
+                {
+                    //speed up power up applied
+                }   
+                if(inventory.Inventory[i].itemName == "Mask")
+                {
+                    //mask power up applied
+                }
+                if(inventory.Inventory[i].itemName == "Sneakers")
+                {
+                    //jump power up applied
+                }
+            }
+        }
     }
     
     void Update()

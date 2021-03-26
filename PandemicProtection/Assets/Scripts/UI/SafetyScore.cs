@@ -28,7 +28,6 @@ public class SafetyScore : MonoBehaviour
         int minutes = (int)(Time.time / 60);
         if((int)(Time.time - gameStartTime) == minutes + 1)
         { 
-            Debug.Log(modifier);
             if(SocialDistance.withinRange == true) 
             {
                 modifier -= 100;

@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
     public int curHealth = 0;
     public int maxHealth = 100;
+    public Image image;
 
     public HealthBar healthBar;
     // Start is called before the first frame update
@@ -23,6 +25,10 @@ public class Health : MonoBehaviour
     {
         curHealth -= damage;
 
+        if(curHealth == 100) {
+            image.GetComponent<Image>().color = new Color(255, 0, 0);
+        }
+
         healthBar.SetHealth(curHealth);
     }
    
@@ -30,6 +36,7 @@ public class Health : MonoBehaviour
     {
         curHealth += health;
         healthBar.SetHealth(curHealth);
+        image.GetComponent<Image>().color = new Color(0, 0, 225);
         //maxHealth += health;
         //curHealth = maxHealth;
         //healthBar.SetMaxHealth(maxHealth);

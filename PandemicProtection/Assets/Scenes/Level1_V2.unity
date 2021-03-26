@@ -12224,7 +12224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.179465, y: 0.3371908, z: -9}
+  m_LocalPosition: {x: 3.0379767, y: 0.43335646, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14473,8 +14473,7 @@ MonoBehaviour:
   JumpForce: 6.5
   sprite: {fileID: 0}
   NPCPos: {x: 0, y: 0, z: 0}
-  speedPower: {fileID: 0}
-  jumpPower: {fileID: 0}
+  inventory: {fileID: 11400000, guid: f75c8c926fc0841aca29d83fdb08e5fe, type: 2}
 --- !u!50 &838423053
 Rigidbody2D:
   serializedVersion: 4
@@ -14510,6 +14509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curHealth: 0
   maxHealth: 100
+  image: {fileID: 1400438941}
   healthBar: {fileID: 1493118634}
 --- !u!114 &838423055
 MonoBehaviour:
@@ -15409,7 +15409,7 @@ PrefabInstance:
     - target: {fileID: 625097884858502640, guid: ae06b488b3d81a94b8c241f942d9ae34,
         type: 3}
       propertyPath: m_Alpha
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae06b488b3d81a94b8c241f942d9ae34, type: 3}
@@ -16955,8 +16955,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.6799927, y: 0.47000122}
-  m_SizeDelta: {x: -9.718765, y: -5.572979}
+  m_AnchoredPosition: {x: 0.000030517578, y: -0.0000104904175}
+  m_SizeDelta: {x: 0.000030517578, y: 0.000011444092}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1400438941
 MonoBehaviour:

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 5
   description: Increases jump distance
-  itemName: Jump Increase
+  itemName: Sneakers
   purchased: 0
