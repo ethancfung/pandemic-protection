@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
         else if (other.gameObject.CompareTag("DeathZone")) // player falls into death zones
         {
             //Debug.Log("Death");
-            LevelLoader.instance.LoadNextLevel(3);
+            LevelLoader.instance.LoadNextLevel("Game_Over");
         }
         else if (other.gameObject.CompareTag("NPC")) 
         {

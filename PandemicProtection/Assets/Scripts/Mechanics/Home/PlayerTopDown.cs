@@ -7,11 +7,13 @@ public class PlayerTopDown : MonoBehaviour
     public float MovementSpeed = 2;
     private Rigidbody2D _rigidbody;
     public SpriteRenderer sprite; 
+    //public SelectionMenu menu;
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
+        //menu = GetComponent<SelectionMenu>();
     }
     
     void Update()
@@ -36,7 +38,8 @@ public class PlayerTopDown : MonoBehaviour
        
         if (other.gameObject.CompareTag("HomeDoor"))
         {
-            LevelLoader.instance.LoadNextLevel(-1);
+            //open popup menu
+            SelectionMenu.instance.OpenMenu();
         }
     }
 }

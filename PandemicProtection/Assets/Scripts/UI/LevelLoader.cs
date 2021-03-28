@@ -31,15 +31,15 @@ public class LevelLoader : MonoBehaviour
         //btn.onClick.AddListener(LoadNextLevel);
     }
 
-    public void LoadNextLevel(int nextScreen)
+    public void LoadNextLevel(string sceneName)
     {
-        if (nextScreen == -1) // load next level in sequence
+        if (sceneName.Equals("next")) // load next level in sequence
         {
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
         }
-        else // load specified build index
+        else // load specified scene
         {
-            StartCoroutine(LoadLevel(nextScreen));
+            StartCoroutine(LoadLevel(sceneName));
         }
     }
 
@@ -53,5 +53,17 @@ public class LevelLoader : MonoBehaviour
 
         // load scene
         SceneManager.LoadScene(levelIndex);
+    }
+
+    IEnumerator LoadLevel(string sceneName)
+    {
+        // Play animation
+        transition.SetTrigger("Start");
+
+        // wait
+        yield return new WaitForSeconds(transitionTime);
+
+        // load scene
+        SceneManager.LoadScene(sceneName);
     }
 }

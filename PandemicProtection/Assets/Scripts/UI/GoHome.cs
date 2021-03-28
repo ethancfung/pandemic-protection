@@ -12,7 +12,7 @@ public class GoHome : MonoBehaviour
     { 
         triggerBtn = GetComponent<Button>();
         triggerBtn.onClick.AddListener(() => {
-            LevelLoader.instance.LoadNextLevel(1); // go home
+            LevelLoader.instance.LoadNextLevel("Home"); // go home
         });
     }
 }
