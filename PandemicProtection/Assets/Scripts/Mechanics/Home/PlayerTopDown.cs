@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerTopDown : MonoBehaviour
 {
-    public float MovementSpeed = 2;
+    public float MovementSpeed = 8;
     private Rigidbody2D _rigidbody;
     public SpriteRenderer sprite; 
     //public SelectionMenu menu;
