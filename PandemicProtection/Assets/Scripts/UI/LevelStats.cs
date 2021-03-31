@@ -7,22 +7,48 @@ public class LevelStats : MonoBehaviour
 {
 
     public TextMeshProUGUI levelName;
-    public TextMeshProUGUI score;
-    public TextMeshProUGUI time;
-    public TextMeshProUGUI points;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI timeText;
+    public TextMeshProUGUI pointsText;
+    private string level;
+    private int score;
+    private float time;
+    private int points;
 
     // Start is called before the first frame update
     void Start()
     {
-        levelName.text = "Completed errand: " + PlayerPrefs.GetString("Level");
-        score.text = "Safety Score: " + PlayerPrefs.GetInt("Score").ToString();
-        time.text = "Time: " + PlayerPrefs.GetFloat("Time").ToString("F1");
-        points.text = "x " + PlayerPrefs.GetInt("Points").ToString();
+        level = PlayerPrefs.GetString("Level");
+        score = PlayerPrefs.GetInt("Score");
+        time = PlayerPrefs.GetFloat("Time");
+        points = PlayerPrefs.GetInt("Points");
+
+        levelName.text = "Completed errand: " + level;
+        scoreText.text = "Safety Score: " + score.ToString();
+        timeText.text = "Time: " + time.ToString("F1");
+        pointsText.text = "x " + points.ToString();
     }
 
-    void SaveStats()
+    public void SaveStats()
     {
+        // new high score
+        if (score > PlayerPrefs.GetInt(level + "High"))
+        {
+            PlayerPrefs.SetInt(level + "High", score);
+        }
 
+        if (PlayerPrefs.HasKey("Total Points"))
+        {
+            PlayerPrefs.SetInt("Total Points", PlayerPrefs.GetInt("Total Points") + points);
+        }else {
+            PlayerPrefs.SetInt("Total Points", points);
+        }
+
+        // clear
+        PlayerPrefs.DeleteKey("Level");
+        PlayerPrefs.DeleteKey("Score");
+        PlayerPrefs.DeleteKey("Time");
+        PlayerPrefs.DeleteKey("Points");
     }
 
     // Update is called once per frame

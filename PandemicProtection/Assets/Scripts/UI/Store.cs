@@ -8,7 +8,7 @@ public class Store : MonoBehaviour
 {
     public TextMeshProUGUI points;
 
-    public int playerPoints = 10;
+    private int playerPoints;
     public Button [] btns;
     public InventoryScript inventory;
     public Button exit;
@@ -16,6 +16,14 @@ public class Store : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (PlayerPrefs.HasKey("Total Points"))
+        {
+            playerPoints = PlayerPrefs.GetInt("Total Points");
+        }else 
+        {
+            PlayerPrefs.SetInt("Total Points", 0);
+            playerPoints = 0;
+        }
         points = GetComponent<TextMeshProUGUI>();
 
         for (int i = 0; i < btns.Length; i++)
@@ -53,6 +61,7 @@ public class Store : MonoBehaviour
     void Update()
     {
         points.text = playerPoints.ToString();
+        PlayerPrefs.SetInt("Total Points", playerPoints);
     }
 
     private void OnApplicationQuit() 
