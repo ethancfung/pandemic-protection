@@ -20,7 +20,8 @@ public class Computer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E)) {        
             //TRANSITION TO STORE SCENE  
-            Debug.Log("logging on to PPzon...");                        
+            Debug.Log("logging on to PPzon...");
+            LevelLoader.instance.LoadNextLevel("Shop");                        
         }
     }
     

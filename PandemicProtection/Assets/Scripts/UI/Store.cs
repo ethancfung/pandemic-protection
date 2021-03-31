@@ -16,7 +16,6 @@ public class Store : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        exit.onClick.AddListener(exitToHome);
         points = GetComponent<TextMeshProUGUI>();
 
         for (int i = 0; i < btns.Length; i++)
@@ -48,12 +47,6 @@ public class Store : MonoBehaviour
         {
             Debug.Log("Not enough funds");
         }
-    }
-
-    void exitToHome()
-    {
-        //ADD TRANSITION BACK TO HOME
-        Debug.Log("Exiting to home...");
     }
 
     // Update is called once per frame

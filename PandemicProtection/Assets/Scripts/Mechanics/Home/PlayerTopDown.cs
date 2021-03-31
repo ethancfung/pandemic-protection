@@ -26,7 +26,7 @@ public class PlayerTopDown : MonoBehaviour
             sprite.flipX = true;
         }
         else {
-             sprite.flipX = false;
+            sprite.flipX = false;
         }
 
         transform.position += new Vector3(hmovement, vmovement, 0) * Time.deltaTime * MovementSpeed;

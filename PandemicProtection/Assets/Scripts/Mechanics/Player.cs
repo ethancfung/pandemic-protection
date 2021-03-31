@@ -87,6 +87,7 @@ public class Player : MonoBehaviour
         else if (other.gameObject.CompareTag("VictoryZone"))
         {
             Debug.Log("Victory");
+            LevelLoader.instance.LoadNextLevel("Home");
         }
     }
 }
