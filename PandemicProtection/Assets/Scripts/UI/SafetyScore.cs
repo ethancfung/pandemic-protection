@@ -10,10 +10,15 @@ public class SafetyScore : MonoBehaviour
     public int modifier;
     private int currScore;
     private int gameStartTime;
+    public static SafetyScore instance;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
         Score = GetComponent<TextMeshProUGUI>();
         modifier = 1000;
         currScore = 0;
@@ -44,5 +49,10 @@ public class SafetyScore : MonoBehaviour
             gameStartTime = (int)Time.time;
 
         }
+    }
+
+    public int GetScore()
+    {
+        return currScore;
     }
 }

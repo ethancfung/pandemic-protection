@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -87,7 +88,26 @@ public class Player : MonoBehaviour
         else if (other.gameObject.CompareTag("VictoryZone"))
         {
             Debug.Log("Victory");
-            LevelLoader.instance.LoadNextLevel("Home");
+
+            Scene scene = SceneManager.GetActiveScene();
+            string level = "";
+            if (scene.name == "Level1_V2")
+            {
+                level = "Groceries";
+            }else if (scene.name == "Level2")
+            {
+                level = "Bank Appointment";
+            }else
+            {
+                level = "Annual Checkup";
+            }
+
+            PlayerPrefs.SetInt("Points", PointManager.instance.GetPoints());
+            PlayerPrefs.SetString("Level", level);
+            PlayerPrefs.SetFloat("Time", PlayTime.time);
+            PlayerPrefs.SetInt("Score", SafetyScore.instance.GetScore());
+            
+            LevelLoader.instance.LoadNextLevel("Victory");
         }
     }
 }

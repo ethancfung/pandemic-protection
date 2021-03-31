@@ -8,7 +8,7 @@ public class PointManager : MonoBehaviour
 
     public static PointManager instance;
     public TextMeshProUGUI text;
-    int score;
+    private int score;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,11 @@ public class PointManager : MonoBehaviour
     {
         score += value;
         text.text = "x " + score.ToString();
+    }
+
+    public int GetPoints()
+    {
+        return score;
     }
 
 }
