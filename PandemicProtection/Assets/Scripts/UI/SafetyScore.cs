@@ -7,6 +7,7 @@ using TMPro;
 public class SafetyScore : MonoBehaviour
 {
     public TextMeshProUGUI Score;
+    public TextMeshProUGUI Mod;
     public int modifier;
     private int currScore;
     private int gameStartTime;
@@ -45,6 +46,7 @@ public class SafetyScore : MonoBehaviour
                 }
             }
             currScore += modifier;
+            Mod.text = "Multiplier: " + modifier.ToString();
             Score.text = "Safety Score: " + currScore.ToString();
             gameStartTime = (int)Time.time;
 

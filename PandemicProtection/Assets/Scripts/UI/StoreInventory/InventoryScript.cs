@@ -10,7 +10,7 @@ public class InventoryScript : ScriptableObject
     public void AddItem(Item item) 
     {
         Debug.Log(item.purchased);
-        if(item.purchased)
+        if(!item.purchased)
         {
             Inventory.Add(item);
         }

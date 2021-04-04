@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -17,11 +18,16 @@ public class Player : MonoBehaviour
     public JumpPower jumpPower;
     public HealthPower healthPower;
     public InventoryScript inventory;
+    public Image jump;
+    public Image speed;
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
+
+        speed.enabled = false;
+        jump.enabled = false;
 
         if(inventory.Inventory.Count != 0)
         {
@@ -30,6 +36,7 @@ public class Player : MonoBehaviour
                 if(inventory.Inventory[i].itemName == "Coffee")
                 {
                     //speed up power up applied
+                    speed.enabled = true;
                     speedPower.getSpeedPower();
                 }   
                 if(inventory.Inventory[i].itemName == "Mask")
@@ -40,6 +47,7 @@ public class Player : MonoBehaviour
                 if(inventory.Inventory[i].itemName == "Sneakers")
                 {
                     //jump power up applied
+                    jump.enabled = true;
                     jumpPower.getJumpPower();
                 }
             }

@@ -68,4 +68,5 @@ public class Store : MonoBehaviour
     {
         inventory.Inventory.Clear();
     }
+
 }

@@ -14,7 +14,7 @@ public class HealthPower : MonoBehaviour
     {
         maskSprite = Resources.Load<Sprite>("Clothes/Sprite Power Ups"); 
     }
-
+    /*
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -31,11 +31,12 @@ public class HealthPower : MonoBehaviour
 
             Destroy(gameObject);
         }
-    }
+    } */
     public void getHealthPower()
     {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
-        playerHealth.HealPlayer(increase);
+        playerHealth.HealPlayer(10);
+
         rend = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>();
         rend.sprite = maskSprite;
     }

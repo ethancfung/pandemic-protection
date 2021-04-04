@@ -27,6 +27,7 @@ public class Health : MonoBehaviour
 
     public void DamagePlayer( int damage )
     {
+        Debug.Log(curHealth);
         curHealth -= damage;
 
         if(curHealth == 100) {
@@ -38,7 +39,9 @@ public class Health : MonoBehaviour
    
     public void HealPlayer(int health)
     {
+        Debug.Log(health);
         curHealth += health;
+        Debug.Log(curHealth);
         healthBar.SetHealth(curHealth);
         image.GetComponent<Image>().color = new Color(0, 0, 225);
         //maxHealth += health;
