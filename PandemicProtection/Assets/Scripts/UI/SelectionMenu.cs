@@ -27,6 +27,7 @@ public class SelectionMenu : MonoBehaviour
 
     public void CloseMenu()
     {
+        SoundManager.PlaySound("exit");
         selectionUI.SetActive(false);
         SelectionIsOpen = false;
     }

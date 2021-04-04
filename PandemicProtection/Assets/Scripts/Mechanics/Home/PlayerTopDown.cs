@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerTopDown : MonoBehaviour
 {
-    public float MovementSpeed = 8;
+    public float MovementSpeed = 100;
     private Rigidbody2D _rigidbody;
     public SpriteRenderer sprite; 
     //public SelectionMenu menu;
@@ -39,6 +39,7 @@ public class PlayerTopDown : MonoBehaviour
         if (other.gameObject.CompareTag("HomeDoor"))
         {
             //open popup menu
+            SoundManager.PlaySound("exit");
             SelectionMenu.instance.OpenMenu();
         }
     }

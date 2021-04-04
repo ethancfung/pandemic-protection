@@ -40,7 +40,8 @@ public class Store : MonoBehaviour
 
         if((playerPoints - item.powerup.price) >= 0)
         {
-            if(inventory.chkItem(item.powerup))
+            SoundManager.PlaySound("buy");
+            if (inventory.chkItem(item.powerup))
             {
                 Debug.Log("yes, hello");
                 inventory.AddItem(item.powerup);
@@ -53,6 +54,7 @@ public class Store : MonoBehaviour
         }
         else 
         {
+            SoundManager.PlaySound("hit");
             Debug.Log("Not enough funds");
         }
     }

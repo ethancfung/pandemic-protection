@@ -71,6 +71,7 @@ public class Player : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
         {
+            SoundManager.PlaySound("jump");
             _rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
         }
 
@@ -81,22 +82,25 @@ public class Player : MonoBehaviour
         //Debug.Log("collision");
         if (other.gameObject.CompareTag("Points")) // protection points
         {
+            SoundManager.PlaySound("coin");
             PointManager.instance.UpdatePoints(1);
             Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("DeathZone")) // player falls into death zones
         {
+            SoundManager.PlaySound("lose");
             //Debug.Log("Death");
             LevelLoader.instance.LoadNextLevel("Game_Over");
         }
         else if (other.gameObject.CompareTag("NPC")) 
         {
+            SoundManager.PlaySound("hit");
             Debug.Log("NPC");
         }
         else if (other.gameObject.CompareTag("VictoryZone"))
         {
             Debug.Log("Victory");
-
+            SoundManager.PlaySound("win");
             Scene scene = SceneManager.GetActiveScene();
             string level = "";
             if (scene.name == "Level1_V2")

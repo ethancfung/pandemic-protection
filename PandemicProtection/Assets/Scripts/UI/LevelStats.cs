@@ -31,6 +31,7 @@ public class LevelStats : MonoBehaviour
 
     public void SaveStats()
     {
+        SoundManager.PlaySound("exit");
         // new high score
         if (score > PlayerPrefs.GetInt(level + "High"))
         {
