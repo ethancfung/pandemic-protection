@@ -16,6 +16,7 @@ public class Store : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(inventory.Inventory.Count);
         if (PlayerPrefs.HasKey("Total Points"))
         {
             playerPoints = PlayerPrefs.GetInt("Total Points");
@@ -35,14 +36,15 @@ public class Store : MonoBehaviour
 
     void TaskOnClick(int buttonIndex) {
         var item = btns[buttonIndex].GetComponent<PowerUp>();
+        Debug.Log(item);
 
         //Debug.Log(item.powerup.price);
 
         if((playerPoints - item.powerup.price) >= 0)
         {
-            SoundManager.PlaySound("buy");
             if (inventory.chkItem(item.powerup))
             {
+                SoundManager.PlaySound("buy");
                 Debug.Log("yes, hello");
                 inventory.AddItem(item.powerup);
                 playerPoints = playerPoints - item.powerup.price;
@@ -68,7 +70,7 @@ public class Store : MonoBehaviour
 
     private void OnApplicationQuit() 
     {
-        inventory.Inventory.Clear();
+        //inventory.Inventory.Clear();
     }
 
 }
