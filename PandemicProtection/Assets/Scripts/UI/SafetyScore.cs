@@ -37,6 +37,10 @@ public class SafetyScore : MonoBehaviour
             if(SocialDistance.withinRange == true) 
             {
                 modifier -= 100;
+                if (modifier <= 0)
+                {
+                    LevelLoader.instance.LoadNextLevel("Game_Over");
+                }
             }
             else
             {
@@ -46,7 +50,7 @@ public class SafetyScore : MonoBehaviour
                 }
             }
             currScore += modifier;
-            Mod.text = "Multiplier: " + modifier.ToString();
+            Mod.text = "x" + modifier.ToString();
             Score.text = "Safety Score: " + currScore.ToString();
             gameStartTime = (int)Time.time;
 
