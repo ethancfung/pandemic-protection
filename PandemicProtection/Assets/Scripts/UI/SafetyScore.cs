@@ -20,7 +20,6 @@ public class SafetyScore : MonoBehaviour
         {
             instance = this;
         }
-        Score = GetComponent<TextMeshProUGUI>();
         modifier = 1000;
         currScore = 0;
 

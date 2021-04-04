@@ -1699,7 +1699,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222445789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5118418, y: 0.5000002, z: -9}
+  m_LocalPosition: {x: 0.30148032, y: 0.5000002, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3109,8 +3109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b048b331fd03a648b90aad42c3d3b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  increase: 20
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 756238324}
 --- !u!58 &587507670
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -32706,8 +32705,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSpeed: 3
   JumpForce: 6.5
-  sprite: {fileID: 0}
-  NPCPos: {x: 0, y: 0, z: 0}
   speedPower: {fileID: 1921380826}
   jumpPower: {fileID: 298786251}
   healthPower: {fileID: 587507669}

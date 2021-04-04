@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class HealthPower : MonoBehaviour
 {
-    public int increase = 10;
     public Health playerHealth;
-    private SpriteRenderer rend;
-    private Sprite regSprite, maskSprite;
+    //public SpriteRenderer rend;
+    //private Sprite maskSprite;
 
-    private void Start()
+    void Start()
     {
-        maskSprite = Resources.Load<Sprite>("Clothes/Sprite Power Ups"); 
+        
+        //maskSprite = Resources.Load<Sprite>("Clothes/Sprite Power Ups"); 
     }
     /*
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,10 +34,10 @@ public class HealthPower : MonoBehaviour
     } */
     public void getHealthPower()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+        //playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
         playerHealth.HealPlayer(10);
 
-        rend = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>();
-        rend.sprite = maskSprite;
+        //rend = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>();
+        //rend.sprite = maskSprite;
     }
 }

@@ -36,7 +36,7 @@ public class Store : MonoBehaviour
     void TaskOnClick(int buttonIndex) {
         var item = btns[buttonIndex].GetComponent<PowerUp>();
 
-        Debug.Log(item.powerup.price);
+        //Debug.Log(item.powerup.price);
 
         if((playerPoints - item.powerup.price) >= 0)
         {

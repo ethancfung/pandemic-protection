@@ -33,6 +33,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel(string sceneName)
     {
+        SocialDistance.withinRange = false;
         if (sceneName.Equals("next")) // load next level in sequence
         {
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
@@ -57,11 +58,20 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadLevel(string sceneName)
     {
+
         // Play animation
         transition.SetTrigger("Start");
 
+        
+        if (sceneName.Equals("Game_Over"))
+        {
+            SoundManager.PlaySound("lose");
+            yield return new WaitForSeconds(2f);
+        }   
+
         // wait
         yield return new WaitForSeconds(transitionTime);
+        
 
         // load scene
         SceneManager.LoadScene(sceneName);
