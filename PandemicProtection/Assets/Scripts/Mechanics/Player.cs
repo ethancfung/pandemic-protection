@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
         else if (other.gameObject.CompareTag("NPC")) 
         {
             SoundManager.PlaySound("hit");
-            Debug.Log("NPC");
+            //Debug.Log("NPC");
         }
         else if (other.gameObject.CompareTag("VictoryZone"))
         {
