@@ -40,7 +40,7 @@ public class LevelStats : MonoBehaviour
         finalScore = calculateFinalScore();
         finalScoreText.text = "Final Score: " + finalScore.ToString();
         
-        newHighScore = (!PlayerPrefs.HasKey(level + "High") || (score > PlayerPrefs.GetInt(level + "High")));
+        newHighScore = (!PlayerPrefs.HasKey(level + "High") || (finalScore > PlayerPrefs.GetInt(level + "High")));
         if (newHighScore)
         {
             highScoreImg.enabled = true;
@@ -52,17 +52,18 @@ public class LevelStats : MonoBehaviour
         }
     }
 
+    // final score calculation based on safety score, time, and remaining health
     private int calculateFinalScore()
     {
         int subtraction = (int) (500 * time);
 
-        if (subtraction > 30000)
+        if (subtraction > 45000)
         {
-            subtraction = 30000; // cap
+            subtraction = 45000; // cap
         } 
 
         int healthBonus = 0;
-        if (remainingHealth == 100)
+        if (remainingHealth >= 100)
         {
             healthBonus = 5;
         }else if (remainingHealth > 75)
@@ -79,7 +80,9 @@ public class LevelStats : MonoBehaviour
             healthBonus = -1;
         }
 
-        return (score - subtraction + healthBonus * 10000);
+        int final = score - subtraction + healthBonus * 10000;
+
+        return final;
 
     }
 
@@ -89,13 +92,14 @@ public class LevelStats : MonoBehaviour
         // new high score
         if (newHighScore)
         {
-            PlayerPrefs.SetInt(level + "High", score);
+            PlayerPrefs.SetInt(level + "High", finalScore);
         }
 
         if (PlayerPrefs.HasKey("Total Points"))
         {
             PlayerPrefs.SetInt("Total Points", PlayerPrefs.GetInt("Total Points") + points);
-        }else {
+        }else 
+        {
             PlayerPrefs.SetInt("Total Points", points);
         }
 
@@ -108,12 +112,7 @@ public class LevelStats : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        SaveStats();
+        SaveStats(); // save stats if they quit game mode
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
