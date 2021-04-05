@@ -117,10 +117,13 @@ public class Player : MonoBehaviour
                 level = "Annual Checkup";
             }
 
+            Health health = gameObject.GetComponent<Health>();
+
             PlayerPrefs.SetInt("Points", PointManager.instance.GetPoints());
             PlayerPrefs.SetString("Level", level);
             PlayerPrefs.SetFloat("Time", PlayTime.time);
             PlayerPrefs.SetInt("Score", SafetyScore.instance.GetScore());
+            PlayerPrefs.SetInt("Health", health.curHealth);
             
             LevelLoader.instance.LoadNextLevel("Victory");
         }

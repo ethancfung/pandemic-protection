@@ -850,6 +850,18 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 798492676}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &798492678 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 625097883917821809, guid: ae06b488b3d81a94b8c241f942d9ae34,
+    type: 3}
+  m_PrefabInstance: {fileID: 798492676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d9249daef28284d9858574c5379657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &942649749
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,7 +944,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 942649752}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 798492678}
+        m_MethodName: LoadNextLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Home
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &942649752
 MonoBehaviour:
   m_ObjectHideFlags: 0
