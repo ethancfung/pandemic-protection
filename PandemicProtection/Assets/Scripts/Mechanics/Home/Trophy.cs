@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Computer : MonoBehaviour
+public class Trophy : MonoBehaviour
 {
     public bool hasCollided = false;
     public string labelText = "";
@@ -13,16 +13,15 @@ public class Computer : MonoBehaviour
  
     void Start()
     {
-        Instruction.SetActive(false);
+         Instruction.SetActive(false);
     }
 
     private void OnTriggerStay2D(Collider2D other) 
     {
         Instruction.SetActive(true);
         if (Input.GetKeyDown(KeyCode.E)) {        
-            //TRANSITION TO STORE SCENE  
-            Debug.Log("logging on to PPzon...");
-            LevelLoader.instance.LoadNextLevel("Shop");                        
+            //TRANSITION TO TROPHY SCENE  
+            LevelLoader.instance.LoadNextLevel("Trophy Case");                        
         }
     }
     
@@ -32,7 +31,7 @@ public class Computer : MonoBehaviour
         if(other.gameObject.tag =="Player") 
         {
             hasCollided = true;
-            labelText = "Log onto P Mart Online? (press E to continue)";
+            labelText = "Open the trophy case? (press E to continue)";
             label.text = labelText;
         }
         Debug.Log(labelText);

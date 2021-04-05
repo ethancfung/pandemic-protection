@@ -48,7 +48,6 @@ public class Store : MonoBehaviour
             if (PlayerInventory.instance.chkItem(item.powerup))
             {
                 SoundManager.PlaySound("buy");
-                Debug.Log("yes, hello");
                 PlayerInventory.instance.AddItem(item.powerup);
                 playerPoints = playerPoints - item.powerup.price;
                 item.powerup.purchased = true;
