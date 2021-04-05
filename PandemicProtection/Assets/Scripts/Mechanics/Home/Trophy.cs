@@ -21,7 +21,7 @@ public class Trophy : MonoBehaviour
         Instruction.SetActive(true);
         if (Input.GetKeyDown(KeyCode.E)) {        
             //TRANSITION TO TROPHY SCENE  
-            LevelLoader.instance.LoadNextLevel("Trophy Case");                        
+            LevelLoader.instance.LoadNextLevel("TrophyCase");                        
         }
     }
     

@@ -21,7 +21,7 @@ public class Health : MonoBehaviour
     {
         if (curHealth == 0)
         {
-            LevelLoader.instance.LoadNextLevel("Game_Over");
+            LevelLoader.instance.LoadNextLevel("GameOver");
         }
     }
 
@@ -39,7 +39,7 @@ public class Health : MonoBehaviour
    
     public void HealPlayer(int health)
     {
-        Debug.Log(health);
+        //Debug.Log(health);
         curHealth += health;
         Debug.Log(curHealth);
         healthBar.SetHealth(curHealth);

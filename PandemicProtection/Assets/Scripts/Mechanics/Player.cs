@@ -94,7 +94,7 @@ public class Player : MonoBehaviour
         else if (other.gameObject.CompareTag("DeathZone")) // player falls into death zones
         {
             //Debug.Log("Death");
-            LevelLoader.instance.LoadNextLevel("Game_Over");
+            LevelLoader.instance.LoadNextLevel("GameOver");
         }
         else if (other.gameObject.CompareTag("NPC")) 
         {
@@ -106,7 +106,7 @@ public class Player : MonoBehaviour
             Debug.Log("Victory");
             Scene scene = SceneManager.GetActiveScene();
             string level = "";
-            if (scene.name == "Level1_V2")
+            if (scene.name == "Level1")
             {
                 level = "Groceries";
             }else if (scene.name == "Level2")

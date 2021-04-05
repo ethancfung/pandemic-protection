@@ -20,17 +20,6 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*if (Input.GetMouseButtonDown(0))
-        {
-            LoadNextLevel();
-        }*/
-        //Button btn = transitionBtn.GetComponent<Button>();
-        //btn.onClick.AddListener(LoadNextLevel);
-    }
-
     public void LoadNextLevel(string sceneName)
     {
         SocialDistance.withinRange = false;
@@ -63,7 +52,7 @@ public class LevelLoader : MonoBehaviour
         transition.SetTrigger("Start");
 
         
-        if (sceneName.Equals("Game_Over"))
+        if (sceneName.Equals("GameOver"))
         {
             SoundManager.PlaySound("lose");
             yield return new WaitForSeconds(2f);

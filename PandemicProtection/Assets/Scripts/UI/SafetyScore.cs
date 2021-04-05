@@ -38,7 +38,7 @@ public class SafetyScore : MonoBehaviour
                 modifier -= 100;
                 if (modifier <= 0)
                 {
-                    LevelLoader.instance.LoadNextLevel("Game_Over");
+                    LevelLoader.instance.LoadNextLevel("GameOver");
                 }
             }
             else

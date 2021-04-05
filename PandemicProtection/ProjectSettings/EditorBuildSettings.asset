@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Home.unity
     guid: f8eb9e93d479c450596804cfefa795d9
   - enabled: 1
-    path: Assets/Scenes/Level1_V2.unity
+    path: Assets/Scenes/Level1.unity
     guid: 77abee7e99cdaa244880b5491d396ac2
   - enabled: 1
-    path: Assets/Scenes/Game_Over.unity
+    path: Assets/Scenes/GameOver.unity
     guid: 77850f0dab84c6c459c0055ccbb4364a
   - enabled: 1
     path: Assets/Scenes/Level2.unity
@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Shop.unity
     guid: 7e37cccba6b394b57884bd29fbd47a47
   - enabled: 1
-    path: Assets/Scenes/Trophy Case.unity
+    path: Assets/Scenes/TrophyCase.unity
     guid: 8e650d004ab0944de8d635779ce4667e
   - enabled: 1
     path: Assets/Scenes/Level3.unity
