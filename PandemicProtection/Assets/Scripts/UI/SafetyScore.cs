@@ -12,6 +12,7 @@ public class SafetyScore : MonoBehaviour
     private int currScore;
     private int gameStartTime;
     public static SafetyScore instance;
+    //public static PlayTime playtime;
 
     // Start is called before the first frame update
     void Start()
@@ -22,16 +23,17 @@ public class SafetyScore : MonoBehaviour
         }
         modifier = 1000;
         currScore = 0;
+        gameStartTime = (int)Time.timeSinceLevelLoad;
 
-        gameStartTime = (int)Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Time.timeSinceLevelLoad);
         //change to time.deltatime?
-        int minutes = (int)(Time.time / 60);
-        if((int)(Time.time - gameStartTime) == minutes + 1)
+        int minutes = (int)(Time.timeSinceLevelLoad / 60);
+        if((int)(Time.timeSinceLevelLoad - gameStartTime) == minutes + 1)
         { 
             if(SocialDistance.withinRange == true) 
             {
@@ -51,7 +53,7 @@ public class SafetyScore : MonoBehaviour
             currScore += modifier;
             Mod.text = "x" + modifier.ToString();
             Score.text = "Safety Score: " + currScore.ToString();
-            gameStartTime = (int)Time.time;
+            gameStartTime = (int)Time.timeSinceLevelLoad;
 
         }
     }

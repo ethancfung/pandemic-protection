@@ -13,6 +13,7 @@ public class PlayTime : MonoBehaviour
     void Start()
     {
         Timer = GetComponent<TextMeshProUGUI>();
+        time = 0;
     }
 
     // Update is called once per frame
