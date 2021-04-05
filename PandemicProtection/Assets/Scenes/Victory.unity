@@ -1469,7 +1469,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1383056747}
   - component: {fileID: 1383056746}
-  - component: {fileID: 1383056745}
   m_Layer: 0
   m_Name: BackgroundAudio
   m_TagString: Untagged
@@ -1477,18 +1476,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1383056745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383056744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 632e0ac9752ab0245884b22f21a75672, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1383056746
 AudioSource:
   m_ObjectHideFlags: 0

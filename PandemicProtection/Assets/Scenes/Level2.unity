@@ -19437,7 +19437,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 528978159}
-  rend: {fileID: 528978163}
 --- !u!58 &1607208404
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20162,7 +20161,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1926033646}
   - component: {fileID: 1926033645}
-  - component: {fileID: 1926033644}
   m_Layer: 0
   m_Name: BackgroundAudio
   m_TagString: Untagged
@@ -20170,18 +20168,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1926033644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926033643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 632e0ac9752ab0245884b22f21a75672, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1926033645
 AudioSource:
   m_ObjectHideFlags: 0

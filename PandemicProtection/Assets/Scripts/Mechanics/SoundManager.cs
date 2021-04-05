@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip coinSound, hitSound, winSound, loseSound, exitSound, buySound, buttonSound, jumpSound;
+    public static AudioClip coinSound, hitSound, winSound, exitSound, buySound, buttonSound, jumpSound;
     static AudioSource audioSrc;
     // Start is called before the first frame update
     void Start()
@@ -12,7 +12,6 @@ public class SoundManager : MonoBehaviour
         coinSound = Resources.Load<AudioClip>("Sounds/Collect_Point_00");
         hitSound = Resources.Load<AudioClip>("Sounds/Hit_01");
         winSound = Resources.Load<AudioClip>("Sounds/Jingle_Achievement_00");
-        loseSound = Resources.Load<AudioClip>("Sounds/Jingle_Lose_01");
         exitSound = Resources.Load<AudioClip>("Sounds/Menu_Navigate_03");
         buySound = Resources.Load<AudioClip>("Sounds/Collect_Point_01");
         buttonSound = Resources.Load<AudioClip>("Sounds/Shoot_01");
@@ -38,9 +37,6 @@ public class SoundManager : MonoBehaviour
                 break;
             case "win":
                 audioSrc.PlayOneShot(winSound);
-                break;
-            case "lose":
-                audioSrc.PlayOneShot(loseSound);
                 break;
             case "exit":
                 audioSrc.PlayOneShot(exitSound);
