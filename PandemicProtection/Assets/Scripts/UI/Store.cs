@@ -10,13 +10,13 @@ public class Store : MonoBehaviour
 
     private int playerPoints;
     public Button [] btns;
-    public InventoryScript inventory;
+    //public InventoryScript inventory;
     public Button exit;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(inventory.Inventory.Count);
+        //Debug.Log(inventory.Inventory.Count);
         if (PlayerPrefs.HasKey("Total Points"))
         {
             playerPoints = PlayerPrefs.GetInt("Total Points");
@@ -40,13 +40,16 @@ public class Store : MonoBehaviour
 
         //Debug.Log(item.powerup.price);
 
+        //PlayerInventory playerInventory = GetComponent<PlayerInventory>();
+
+
         if((playerPoints - item.powerup.price) >= 0)
         {
-            if (inventory.chkItem(item.powerup))
+            if (PlayerInventory.instance.chkItem(item.powerup))
             {
                 SoundManager.PlaySound("buy");
                 Debug.Log("yes, hello");
-                inventory.AddItem(item.powerup);
+                PlayerInventory.instance.AddItem(item.powerup);
                 playerPoints = playerPoints - item.powerup.price;
                 item.powerup.purchased = true;
             }
@@ -68,9 +71,5 @@ public class Store : MonoBehaviour
         PlayerPrefs.SetInt("Total Points", playerPoints);
     }
 
-    private void OnApplicationQuit() 
-    {
-        //inventory.Inventory.Clear();
-    }
 
 }

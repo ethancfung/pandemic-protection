@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class NewGame : MonoBehaviour
 {
-    public InventoryScript inventory;
+    //public InventoryScript inventory;
     // Start is called before the first frame update
     public void StartNewGame()
     {
-        inventory.Inventory.Clear();
+        //PlayerInventory playerInventory = GetComponent<PlayerInventory>();
+        PlayerInventory.instance.GetInventory().Clear();
         PlayerPrefs.DeleteAll();
     }
 }

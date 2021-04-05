@@ -5,9 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Inventory", menuName = "Power Up Inventory")]
 public class InventoryScript : ScriptableObject
 {
-    public List<Item> Inventory;// = new List<Item>();
+    [SerializeField]
+    private List<Item> Inventory;// = new List<Item>();
     
-    public void AddItem(Item item) 
+    /*public void AddItem(Item item) 
     {
         Debug.Log(item.purchased);
         if(!item.purchased)
@@ -33,5 +34,10 @@ public class InventoryScript : ScriptableObject
         }
 
         return (!duplicate);
+    }*/
+
+    public List<Item> GetInventory()
+    {
+        return Inventory;
     }
 }

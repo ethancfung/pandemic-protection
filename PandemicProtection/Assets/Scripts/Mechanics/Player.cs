@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public SpeedPower speedPower; //NULL REFERENCES
     public JumpPower jumpPower;
     public HealthPower healthPower;
-    public InventoryScript inventory;
+    //public InventoryScript inventory;
     public Image jump;
     public Image speed;
 
@@ -26,23 +26,25 @@ public class Player : MonoBehaviour
         speed.enabled = false;
         jump.enabled = false;
 
-        if(inventory.Inventory.Count != 0)
+        List<Item> PurchasedItems = PlayerInventory.instance.GetInventory();
+
+        if(PurchasedItems.Count != 0)
         {
-            for(int i = 0; i < inventory.Inventory.Count; i++)
+            for(int i = 0; i < PurchasedItems.Count; i++)
             {
-                if(inventory.Inventory[i].itemName == "Coffee")
+                if(PurchasedItems[i].itemName == "Coffee")
                 {
                     //speed up power up applied
                     speed.enabled = true;
                     speedPower.getSpeedPower();
                 }   
-                if(inventory.Inventory[i].itemName == "Mask")
+                if(PurchasedItems[i].itemName == "Mask")
                 {
                     //mask power up applied
                     PutOnMask();
                     healthPower.getHealthPower();
                 }
-                if(inventory.Inventory[i].itemName == "Sneakers")
+                if(PurchasedItems[i].itemName == "Sneakers")
                 {
                     //jump power up applied
                     jump.enabled = true;
