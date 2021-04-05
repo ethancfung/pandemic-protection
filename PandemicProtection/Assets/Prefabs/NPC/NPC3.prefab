@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 3916191212548526677}
   - component: {fileID: 3916191212548526674}
   m_Layer: 0
-  m_Name: NPC (2)
+  m_Name: NPC3
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,8 +97,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3916191212548526672}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.399999, y: 0.11999999, z: 0}
-  m_LocalScale: {x: 0.73306936, y: 0.70843726, z: 1}
+  m_LocalPosition: {x: 12.5, y: -0.4616, z: 0}
+  m_LocalScale: {x: 0.60239655, y: 0.58426076, z: 1}
   m_Children:
   - {fileID: 3916191212493740333}
   m_Father: {fileID: 0}

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class NPCAction : MonoBehaviour
 {
-    public float min = 2f;
-    public float max = 3f;
-    public SpriteRenderer sprite; 
+    public float min ;
+    public float max;
+    private SpriteRenderer sprite; 
     private float speed;
     // Start is called before the first frame update
     void Start()
