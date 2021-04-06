@@ -20,6 +20,6 @@ public class PlayTime : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        Timer.text = "Time Elapsed: " + time.ToString("F1");
+        Timer.text = time.ToString("F1");
     }
 }
