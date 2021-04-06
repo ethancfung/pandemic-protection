@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //all sound that is used
         coinSound = Resources.Load<AudioClip>("Sounds/Collect_Point_00");
         hitSound = Resources.Load<AudioClip>("Sounds/Hit_01");
         winSound = Resources.Load<AudioClip>("Sounds/Jingle_Achievement_00");
@@ -24,7 +25,7 @@ public class SoundManager : MonoBehaviour
     {
         
     }
-
+    //plays sound when called
     public static void PlaySound(string clip)
     {
         switch (clip)

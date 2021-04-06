@@ -56,9 +56,7 @@ public class Player : MonoBehaviour
     
     void Update()
     {
-        //Debug.Log(MovementSpeed);
-        //Debug.Log(JumpForce);
-        var movement = Input.GetAxis("Horizontal");
+        var movement = Input.GetAxis("Horizontal");//move left and right
         if(movement > 0.0f)
         {
             sprite.flipX = true;
@@ -67,7 +65,7 @@ public class Player : MonoBehaviour
             sprite.flipX = false;
         }
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
-
+        //jump
         if(Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
         {
             SoundManager.PlaySound("jump");
@@ -84,7 +82,6 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //Debug.Log("collision");
         if (other.gameObject.CompareTag("Points")) // protection points
         {
             SoundManager.PlaySound("coin");
@@ -93,13 +90,11 @@ public class Player : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("DeathZone")) // player falls into death zones
         {
-            //Debug.Log("Death");
             LevelLoader.instance.LoadNextLevel("GameOver");
         }
         else if (other.gameObject.CompareTag("NPC")) 
         {
             SoundManager.PlaySound("hit");
-            //Debug.Log("NPC");
         }
         else if (other.gameObject.CompareTag("VictoryZone"))
         {

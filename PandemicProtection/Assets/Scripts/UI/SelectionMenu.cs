@@ -27,7 +27,7 @@ public class SelectionMenu : MonoBehaviour
 
     public void CloseMenu()
     {
-        SoundManager.PlaySound("exit");
+        SoundManager.PlaySound("exit");// also makes a sound everytime the house is pulled up
         selectionUI.SetActive(false);
         SelectionIsOpen = false;
     }
