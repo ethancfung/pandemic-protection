@@ -8,6 +8,7 @@ public class NPCAction : MonoBehaviour
     public float max;
     private SpriteRenderer sprite; 
     private float speed;
+    private float prevX;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +16,22 @@ public class NPCAction : MonoBehaviour
         min = transform.position.x;
         max = transform.position.x+3;
         sprite = gameObject.GetComponent<SpriteRenderer>();
+        prevX = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(Mathf.PingPong(Time.time*speed,max-min)+min, transform.position.y, transform.position.z);
+        float newX = Mathf.PingPong(Time.time*speed,max-min);
+        transform.position = new Vector3(newX+min, transform.position.y, transform.position.z);
+        if (newX < prevX)
+        {
+            sprite.flipX = true;
+        }else
+        {
+            sprite.flipX = false;
+        }
+        prevX = newX;
 
     }
 }
