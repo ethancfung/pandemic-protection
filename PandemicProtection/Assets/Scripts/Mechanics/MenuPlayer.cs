@@ -29,8 +29,6 @@ public class MenuPlayer : MonoBehaviour
     
     void Update()
     {
-        //Debug.Log(MovementSpeed);
-        //Debug.Log(JumpForce);
         var movement = Input.GetAxis("Horizontal");
         if(movement > 0.0f)
         {
@@ -72,13 +70,13 @@ public class MenuPlayer : MonoBehaviour
             if (!PlayerPrefs.HasKey("Name"))
             {
                 // no loaded game
-                Debug.Log("No saved game!");
+                //Debug.Log("No saved game!");
                 warningBg.enabled = true;
                 warning.enabled = true;
 
             }else 
             {
-                Debug.Log("Loading " + PlayerPrefs.GetString("Name") + " \'s game!");
+                //Debug.Log("Loading " + PlayerPrefs.GetString("Name") + " \'s game!");
                 LevelLoader.instance.LoadNextLevel("Home");
             }
         }
@@ -86,9 +84,9 @@ public class MenuPlayer : MonoBehaviour
         {
             SelectionMenu.instance.OpenMenu();
         }
-        /*else if (other.gameObject.CompareTag("DeathZone")) // player falls into death zones -- easter egg
+        else if (other.gameObject.CompareTag("DeathZone")) // player falls into death zones -- easter egg
         {
             LevelLoader.instance.LoadNextLevel("Credits");
-        }*/ // extra time
+        }
     }
 }
