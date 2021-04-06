@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8746437b6314744d5aa64293a79c7cf9, type: 3}
   m_Name: Jump
   m_EditorClassIdentifier: 
-  price: 5
+  price: 20
   description: Increases jump distance
   itemName: Sneakers
   purchased: 0

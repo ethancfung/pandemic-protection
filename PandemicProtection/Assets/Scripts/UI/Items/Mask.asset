@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8746437b6314744d5aa64293a79c7cf9, type: 3}
   m_Name: Mask
   m_EditorClassIdentifier: 
-  price: 4
+  price: 18
   description: Extends health bar
   itemName: Mask
   purchased: 0

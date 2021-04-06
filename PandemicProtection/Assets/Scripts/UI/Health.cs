@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public int curHealth = 0;
+    public int curHealth = 100;
     public int maxHealth = 100;
     public Image image;
 
@@ -25,10 +25,15 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void DamagePlayer( int damage )
+    public void DamagePlayer(int damage)
     {
-        Debug.Log(curHealth);
+        if(healthBar.healthPower == true)
+        {
+            curHealth = 110;
+        }
+
         curHealth -= damage;
+        healthBar.healthPower = false;
 
         if(curHealth == 100) {
             image.GetComponent<Image>().color = new Color(255, 0, 0);
@@ -39,14 +44,11 @@ public class Health : MonoBehaviour
    
     public void HealPlayer(int health)
     {
-        //Debug.Log(health);
-        curHealth += health;
-        Debug.Log(curHealth);
+        curHealth = 110;
         healthBar.SetHealth(curHealth);
+        healthBar.newMaxHealth(curHealth);
+        healthBar.healthPower = true;
         image.GetComponent<Image>().color = new Color(0, 0, 225);
-        //maxHealth += health;
-        //curHealth = maxHealth;
-        //healthBar.SetMaxHealth(maxHealth);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
