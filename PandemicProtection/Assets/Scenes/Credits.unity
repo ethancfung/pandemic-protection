@@ -280,8 +280,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Ethan Fung
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c50a25c117fbf2f449c9a379105667bc, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: f3367d45f4715d148a5073aaf863467a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 48fffe5085e64594f9c2e864a1bd9380, type: 2}
+  m_sharedMaterial: {fileID: -513939180412958116, guid: 48fffe5085e64594f9c2e864a1bd9380,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -413,8 +414,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Barrett Arbour
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c50a25c117fbf2f449c9a379105667bc, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: f3367d45f4715d148a5073aaf863467a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 48fffe5085e64594f9c2e864a1bd9380, type: 2}
+  m_sharedMaterial: {fileID: -513939180412958116, guid: 48fffe5085e64594f9c2e864a1bd9380,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -635,8 +637,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c50a25c117fbf2f449c9a379105667bc, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: f3367d45f4715d148a5073aaf863467a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 48fffe5085e64594f9c2e864a1bd9380, type: 2}
+  m_sharedMaterial: {fileID: -513939180412958116, guid: 48fffe5085e64594f9c2e864a1bd9380,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -660,8 +663,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -978,8 +981,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Isabella Enriquez
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c50a25c117fbf2f449c9a379105667bc, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: f3367d45f4715d148a5073aaf863467a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 48fffe5085e64594f9c2e864a1bd9380, type: 2}
+  m_sharedMaterial: {fileID: -513939180412958116, guid: 48fffe5085e64594f9c2e864a1bd9380,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1353,8 +1357,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Return to menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c50a25c117fbf2f449c9a379105667bc, type: 2}
-  m_sharedMaterial: {fileID: -7476861927019392247, guid: c50a25c117fbf2f449c9a379105667bc,
+  m_fontAsset: {fileID: 11400000, guid: 7da05c95180ccff4caac694564ca7c07, type: 2}
+  m_sharedMaterial: {fileID: -5047021019784801737, guid: 7da05c95180ccff4caac694564ca7c07,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1379,8 +1383,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

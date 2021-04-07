@@ -669,8 +669,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Groceries
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c50a25c117fbf2f449c9a379105667bc, type: 2}
-  m_sharedMaterial: {fileID: -7476861927019392247, guid: c50a25c117fbf2f449c9a379105667bc,
+  m_fontAsset: {fileID: 11400000, guid: 7da05c95180ccff4caac694564ca7c07, type: 2}
+  m_sharedMaterial: {fileID: -5047021019784801737, guid: 7da05c95180ccff4caac694564ca7c07,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1148,8 +1148,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press E to continue!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c50a25c117fbf2f449c9a379105667bc, type: 2}
-  m_sharedMaterial: {fileID: -7476861927019392247, guid: c50a25c117fbf2f449c9a379105667bc,
+  m_fontAsset: {fileID: 11400000, guid: 7da05c95180ccff4caac694564ca7c07, type: 2}
+  m_sharedMaterial: {fileID: -5047021019784801737, guid: 7da05c95180ccff4caac694564ca7c07,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1174,8 +1174,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2013,8 +2013,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Close
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c50a25c117fbf2f449c9a379105667bc, type: 2}
-  m_sharedMaterial: {fileID: -7476861927019392247, guid: c50a25c117fbf2f449c9a379105667bc,
+  m_fontAsset: {fileID: 11400000, guid: 7da05c95180ccff4caac694564ca7c07, type: 2}
+  m_sharedMaterial: {fileID: -5047021019784801737, guid: 7da05c95180ccff4caac694564ca7c07,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2039,8 +2039,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2260,8 +2260,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: exit to main menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c50a25c117fbf2f449c9a379105667bc, type: 2}
-  m_sharedMaterial: {fileID: -7476861927019392247, guid: c50a25c117fbf2f449c9a379105667bc,
+  m_fontAsset: {fileID: 11400000, guid: 7da05c95180ccff4caac694564ca7c07, type: 2}
+  m_sharedMaterial: {fileID: -5047021019784801737, guid: 7da05c95180ccff4caac694564ca7c07,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3009,8 +3009,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: bank appointment
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c50a25c117fbf2f449c9a379105667bc, type: 2}
-  m_sharedMaterial: {fileID: -7476861927019392247, guid: c50a25c117fbf2f449c9a379105667bc,
+  m_fontAsset: {fileID: 11400000, guid: 7da05c95180ccff4caac694564ca7c07, type: 2}
+  m_sharedMaterial: {fileID: -5047021019784801737, guid: 7da05c95180ccff4caac694564ca7c07,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3465,6 +3465,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 625097883917821808, guid: ae06b488b3d81a94b8c241f942d9ae34,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 625097883917821809, guid: ae06b488b3d81a94b8c241f942d9ae34,
         type: 3}
       propertyPath: transition
@@ -3758,8 +3763,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: annual checkup
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c50a25c117fbf2f449c9a379105667bc, type: 2}
-  m_sharedMaterial: {fileID: -7476861927019392247, guid: c50a25c117fbf2f449c9a379105667bc,
+  m_fontAsset: {fileID: 11400000, guid: 7da05c95180ccff4caac694564ca7c07, type: 2}
+  m_sharedMaterial: {fileID: -5047021019784801737, guid: 7da05c95180ccff4caac694564ca7c07,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
