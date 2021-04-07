@@ -9,8 +9,6 @@ public class LevelLoader : MonoBehaviour
     public static LevelLoader instance;
     public Animator transition;
     public float transitionTime = 1f;
-    //public Button transitionBtn;
-    //public int nextScreen = -1;
 
     void Start()
     {

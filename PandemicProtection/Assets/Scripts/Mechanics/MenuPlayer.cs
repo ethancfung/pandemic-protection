@@ -55,7 +55,7 @@ public class MenuPlayer : MonoBehaviour
 
     public void StartNewGame()
     {
-        Debug.Log("Starting new game with " + nameInput.text);
+        //Debug.Log("Starting new game with " + nameInput.text);
         ClearData();
         PlayerPrefs.SetString("Name", nameInput.text);
         SelectionMenu.instance.CloseMenu();

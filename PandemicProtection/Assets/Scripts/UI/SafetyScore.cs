@@ -29,8 +29,6 @@ public class SafetyScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(Time.timeSinceLevelLoad);
-        //change to time.deltatime?
         int minutes = (int)(Time.timeSinceLevelLoad / 60);
         if((int)(Time.timeSinceLevelLoad - gameStartTime) == minutes + 1)
         { 

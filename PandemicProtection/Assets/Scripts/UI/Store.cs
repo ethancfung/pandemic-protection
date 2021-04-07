@@ -36,13 +36,9 @@ public class Store : MonoBehaviour
 
     void TaskOnClick(int buttonIndex) {
         var item = btns[buttonIndex].GetComponent<PowerUp>();
-        Debug.Log(item);
+        //Debug.Log(item);
 
         //Debug.Log(item.powerup.price);
-
-        //PlayerInventory playerInventory = GetComponent<PlayerInventory>();
-
-
         if((playerPoints - item.powerup.price) >= 0)
         {
             if (PlayerInventory.instance.chkItem(item.powerup))
@@ -53,13 +49,13 @@ public class Store : MonoBehaviour
                 item.powerup.purchased = true;
             }
             else {
-                Debug.Log("Power up purchased");
+                //Debug.Log("Power up purchased");
             }
         }
         else 
         {
             SoundManager.PlaySound("hit");
-            Debug.Log("Not enough funds");
+            //Debug.Log("Not enough funds");
         }
     }
 

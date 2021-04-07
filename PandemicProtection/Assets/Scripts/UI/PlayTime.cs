@@ -12,7 +12,6 @@ public class PlayTime : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Timer = GetComponent<TextMeshProUGUI>();
         time = 0;
     }
 

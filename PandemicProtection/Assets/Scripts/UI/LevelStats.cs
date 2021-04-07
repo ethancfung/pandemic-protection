@@ -35,7 +35,7 @@ public class LevelStats : MonoBehaviour
         scoreText.text = "Safety Score: " + score.ToString();
         timeText.text = "Time: " + time.ToString("F1");
         pointsText.text = "x " + points.ToString();
-        Debug.Log("OLD HIGH SCORE: " + PlayerPrefs.GetInt(level + "High"));
+        //Debug.Log("OLD HIGH SCORE: " + PlayerPrefs.GetInt(level + "High"));
 
         finalScore = calculateFinalScore();
         finalScoreText.text = "Final Score: " + finalScore.ToString();

@@ -28,10 +28,4 @@ public class HealthBar : MonoBehaviour
         healthBar.maxValue = hp;
         healthBar.value = hp;
     }
-
-    //public void SetMaxHealth(int hp)
-    //{
-    //    healthBar = GetComponent<Slider>();
-    //    healthBar.maxValue = hp;
-    //}
 }

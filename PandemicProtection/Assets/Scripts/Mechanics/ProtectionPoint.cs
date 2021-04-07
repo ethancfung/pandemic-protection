@@ -13,7 +13,7 @@ public class ProtectionPoint : MonoBehaviour
     }*/
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("hit");
+        //Debug.Log("hit");
         if (other.gameObject.CompareTag("Player"))
         {
             PointManager.instance.UpdatePoints(1);

@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("VictoryZone"))
         {
-            Debug.Log("Victory");
+            //Debug.Log("Victory");
             Scene scene = SceneManager.GetActiveScene();
             string level = "";
             if (scene.name == "Level1")
