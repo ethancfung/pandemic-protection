@@ -34,7 +34,7 @@ public class TrophyCase : MonoBehaviour
 
         if(PlayerPrefs.HasKey("Annual Checkup" + "High"))
         {
-            score3.text = PlayerPrefs.GetInt("Bank Appointment" + "High").ToString();
+            score3.text = PlayerPrefs.GetInt("Annual Checkup" + "High").ToString();
         }
         else
         {
