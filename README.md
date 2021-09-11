@@ -4,7 +4,11 @@
 A fun 8-bit-styled 👾 2D platformer centered around COVID-19 guidelines in Canada. Built in Unity.
 
 ## 📌 Index
-- [🤝 Team](#🤝-team)
+- [🤝 Team](#-team)
+- [🎬 See It in Action!](#-see-it-in-action)
+- [❤ Mission Statement](#-mission-statement)
+- [👾 Gameplay](#-gameplay)
+- [🎮 Controls](#-controls)
 
 ## 🤝 Team
 - <a href="https://github.com/barrettarbour">Barrett Arbour</a>
